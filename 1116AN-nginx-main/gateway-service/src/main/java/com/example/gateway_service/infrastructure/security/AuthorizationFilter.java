@@ -19,7 +19,7 @@ import com.example.gateway_service.domain.user.vo.RoleType;
 
 import reactor.core.publisher.Mono;
 
-package com.example.gateway_service.infrastructure.security;
+
 
 
 @Component
@@ -35,7 +35,7 @@ public class AuthorizationFilter implements WebFilter {
     );
 
   
-}
+
 
     private boolean isAuthorized(String path, RoleType role) {
         for (Map.Entry<String, RoleType> entry : routeRoles.entrySet()) {
@@ -104,5 +104,4 @@ public class AuthorizationFilter implements WebFilter {
     return chain.filter(exchange);
    }
 
-    
 }
